@@ -5,14 +5,15 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 
 def load_data():
-
+    """this fuction load data"""
     iris = load_iris()
+
     x = iris.data
     y = iris.target
 
     return x, y
 
-def data_preprocessing():
+def data_preprocessing(x, y):
     """this function do data preprocessing"""
     X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, stratify=y, random_state=42)
 
