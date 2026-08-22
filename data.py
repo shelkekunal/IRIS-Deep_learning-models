@@ -13,7 +13,7 @@ def load_data():
     return x, y
 
 def data_preprocessing():
-
+    """this function do data preprocessing"""
     X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.2, stratify=y, random_state=42)
 
     scaler = StandardScaler()
